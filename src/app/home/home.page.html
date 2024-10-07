@@ -11,11 +11,22 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>
-      Start with Ionic
-      <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a>
-    </p>
+  <div class="ion-padding">
+    <div>
+      Use a simulator or a device with a keyboard attached. You can also run in the browser. You will see the following:
+      <ul>
+        <li>Browser: typing shows up, can tab into input, more typing shows up.</li>
+        <li>Android: typing shows up, can tab into input, more typing shows up.</li>
+        <li>iOS: you have to tap the app first, then the typing works.</li>
+      </ul>
+      Expected behavior: iOS should work like Android and browser.
+    </div>
+
+    <ion-list>
+      <ion-item>
+        <ion-input label="enter text"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div>{{log}}</div>
   </div>
 </ion-content>

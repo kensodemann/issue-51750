@@ -1,13 +1,19 @@
-import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
+import { Component, OnInit } from '@angular/core';
+import { IonContent, IonHeader, IonInput, IonItem, IonList, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent],
+  imports: [IonInput, IonItem, IonList, IonHeader, IonToolbar, IonTitle, IonContent],
 })
-export class HomePage {
+export class HomePage implements OnInit {
+  log: string = '';
+
   constructor() {}
+
+  ngOnInit() {
+    window.addEventListener('keydown', (evt: any) => (this.log += ` ${evt.code}`));
+  }
 }
